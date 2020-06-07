@@ -1,4 +1,8 @@
-A simple http server.
+A dart library used for making a simple HTTP server.
+
+This should be used for testing purposes and not for real production.
+
+As you can see in the example it's still bare bones.
 
 # Example
 

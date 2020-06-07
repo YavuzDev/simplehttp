@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import '../simplehttp.dart';
 import 'request.dart';
 import 'response.dart';
@@ -14,7 +13,8 @@ class HttpPathManager {
 
   final Map<String, ResponseFunction> _deleteRequests = {};
 
-  void handle(final HttpRequest request, final HttpResponse response, Map<String, ResponseFunction> available) async {
+  void handle(final HttpRequest request, final HttpResponse response,
+      Map<String, ResponseFunction> available) async {
     final function = _correctRequest(request.uri.path, available);
     if (function == null) {
       return;
@@ -53,7 +53,6 @@ class HttpPathManager {
       var correct = true;
 
       if (split.length == splitUrl.length) {
-
         for (var i = 0; i < split.length; i++) {
           if (split[i].contains(':')) {
             continue;

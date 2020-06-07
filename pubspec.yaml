@@ -1,7 +1,11 @@
 name: simplehttp
-description: A simple http server
+description: A dart library used for making a simple HTTP server.
+
+  This should be used for testing purposes and not for real production.
+
+  As you can see in the example it's still bare bones.
 version: 0.0.2
-#homepage: https://www.example.com
+homepage: https://github.com/Emrage/simplehttp
 
 environment:
   sdk: '>=2.8.1 <3.0.0'

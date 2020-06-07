@@ -1,9 +1,7 @@
-
 import 'dart:convert';
 import 'dart:io';
 
 class Response {
-
   final HttpResponse _httpResponse;
 
   Response(this._httpResponse);

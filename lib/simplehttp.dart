@@ -4,7 +4,6 @@ import 'src/http_path_manager.dart';
 import 'src/request.dart';
 import 'src/response.dart';
 
-
 typedef ResponseFunction = Function(Request request, Response response);
 
 class SimpleHttp {
@@ -28,16 +27,20 @@ class SimpleHttp {
 
       switch (request.method) {
         case 'GET':
-          await _httpPathManager.handle(request, request.response, _httpPathManager.getRequests);
+          await _httpPathManager.handle(
+              request, request.response, _httpPathManager.getRequests);
           break;
         case 'POST':
-          await _httpPathManager.handle(request, request.response, _httpPathManager.postRequests);
+          await _httpPathManager.handle(
+              request, request.response, _httpPathManager.postRequests);
           break;
         case 'PUT':
-          await _httpPathManager.handle(request, request.response, _httpPathManager.putRequests);
+          await _httpPathManager.handle(
+              request, request.response, _httpPathManager.putRequests);
           break;
         case 'DELETE':
-          await _httpPathManager.handle(request, request.response, _httpPathManager.deleteRequests);
+          await _httpPathManager.handle(
+              request, request.response, _httpPathManager.deleteRequests);
           break;
       }
       await request.response.close();
